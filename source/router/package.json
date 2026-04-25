@@ -1,0 +1,8 @@
+{
+  "name": "router",
+  "version": "1.0.0",
+  "main": "router.js",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

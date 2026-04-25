@@ -1,0 +1,56 @@
+name: Deploy to GKE
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  PROJECT_ID: ${{ <placeholder> }}
+  GKE_CLUSTER: ${{ <placeholder> }}
+  GKE_ZONE: ${{ <placeholder> }}
+  IMAGE_NAME_ROUTER: gcr.io/${{ <placeholder> }}/router
+  IMAGE_NAME_API: gcr.io/${{ <placeholder> }}/api-gw
+  IMAGE_NAME_STORE: gcr.io/${{ <placeholder> }}/backend-storage
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Authenticate with Google Cloud
+      uses: google-github-actions/auth@v2
+      with:
+        credentials_json: ${{ secrets.GCP_SA_KEY }}
+    - uses: "google-github-actions/setup-gcloud@v2"
+      with:
+        install_components: "gke-gcloud-auth-plugin"
+
+    - name: Configure Docker
+      run: gcloud auth configure-docker gcr.io
+
+    - name: Build and push Docker image router
+      run: |
+        docker build -t $IMAGE_NAME_ROUTER:$GITHUB_SHA -f source/router/Dockerfile .
+        docker build -t $IMAGE_NAME_ROUTER:latest -f source/router/Dockerfile .
+        docker push $IMAGE_NAME_ROUTER:$GITHUB_SHA
+        docker push $IMAGE_NAME_ROUTER:latest
+
+    - name: Build and push Docker image api
+      run: |
+        docker build -t $IMAGE_NAME_API:$GITHUB_SHA -f source/api-gw/Dockerfile .
+        docker build -t $IMAGE_NAME_API:latest -f source/api-gw/Dockerfile .
+        docker push $IMAGE_NAME_API:$GITHUB_SHA
+        docker push $IMAGE_NAME_API:latest
+
+    - name: Build and push Docker image store
+      run: |
+        docker build -t $IMAGE_NAME_STORE:$GITHUB_SHA -f source/backend-storage/Dockerfile .
+        docker build -t $IMAGE_NAME_STORE:latest -f source/backend-storage/Dockerfile .
+        docker push $IMAGE_NAME_STORE:$GITHUB_SHA
+        docker push $IMAGE_NAME_STORE:latest
+
+    - name: Deploy to GKE
+      run: |
+        gcloud container clusters get-credentials $GKE_CLUSTER --zone $GKE_ZONE
+        <placeholder - add all necessary lines>

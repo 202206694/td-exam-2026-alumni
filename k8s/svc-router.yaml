@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-router
+spec:
+  clusterIP: <placeholder>
+  selector:
+    app: <placeholder>
+  ports:
+    - port: 3000

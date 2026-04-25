@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: <placeholder>
+  template:
+    metadata:
+      labels:
+        app: <placeholder>
+    spec:
+      containers:
+        - name: api-gw
+          image: <placeholder>
+          ports:
+            - containerPort: 3000

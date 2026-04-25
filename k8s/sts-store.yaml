@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: sts-storage
+spec:
+  serviceName: <placeholder>
+  replicas: 1
+  selector:
+    matchLabels:
+      app: <placeholder>
+  template:
+    metadata:
+      labels:
+        app: <placeholder>
+    spec:
+      containers:
+        - name: storage
+          image: <placeholder>
+          ports:
+            - containerPort: 3000
+          volumeMounts:
+            - name: <placeholder>
+              mountPath: /data
+  volumeClaimTemplates:
+    - metadata:
+        name: <placeholder>
+      spec:
+        accessModes: <placeholder>
+        storageClassName: standard
+        resources:
+          requests:
+            storage: 1Gi
