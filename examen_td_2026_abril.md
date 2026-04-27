@@ -72,7 +72,7 @@ a, b, d
 - D) Borra el commit original de la rama de origen
 
 **Solución:**
-d
+b
 
 
 ## **8. Sobre StatefulSets, elige las respuestas correctas:**
