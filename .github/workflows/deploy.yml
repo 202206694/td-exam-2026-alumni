@@ -6,12 +6,13 @@ on:
       - main
 
 env:
-  PROJECT_ID: ${{ <placeholder> }}
-  GKE_CLUSTER: ${{ <placeholder> }}
-  GKE_ZONE: ${{ <placeholder> }}
-  IMAGE_NAME_ROUTER: gcr.io/${{ <placeholder> }}/router
-  IMAGE_NAME_API: gcr.io/${{ <placeholder> }}/api-gw
-  IMAGE_NAME_STORE: gcr.io/${{ <placeholder> }}/backend-storage
+  PROJECT_ID: ${{ vars.GCP_PROJECT_ID }}
+  GKE_CLUSTER: ${{ vars.GKE_CLUSTER }}
+  GKE_ZONE: ${{ vars.GKE_ZONE }}
+  IMAGE_NAME_ROUTER: gcr.io/${{ vars.GCP_PROJECT_ID }}/router
+  IMAGE_NAME_API: gcr.io/${{ vars.GCP_PROJECT_ID }}/api-gw
+  IMAGE_NAME_STORE: gcr.io/${{ vars.GCP_PROJECT_ID }}/backend-storage
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -52,5 +53,13 @@ jobs:
 
     - name: Deploy to GKE
       run: |
-        gcloud container clusters get-credentials $GKE_CLUSTER --zone $GKE_ZONE
-        <placeholder - add all necessary lines>
+        gcloud container clusters get-credentials $GKE_CLUSTER --zone $GKE_ZONE --project $PROJECT_ID
+        kubectl apply -f k8s/svc-router.yaml
+        kubectl apply -f k8s/svc-store.yaml
+        kubectl apply -f k8s/sts-router.yaml
+        kubectl apply -f k8s/sts-store.yaml
+        kubectl apply -f k8s/deploy-api.yaml
+        kubectl apply -f k8s/svc-api.yaml
+        kubectl rollout status deployment/deploy-api
+        kubectl rollout status statefulset/sts-router
+        kubectl rollout status statefulset/sts-storage
