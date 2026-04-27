@@ -93,7 +93,7 @@ a,b
 - D) Ingress es un tipo de recurso Service
 
 **Solución:**
-a,b,d
+a,b,c
 
 ## **10. Selecciona que afirmación es incorrecta sobre Cloud Functions y Cloud Run**
 - A) Cloud Functions es mejor para fragmentos de código pequeños basados en eventos
@@ -198,3 +198,4 @@ a
 
 **Solución:** 
 a,c
+
