@@ -13,6 +13,7 @@
 - D) Puede usar afinidad/anti-afinidad
 
 **Solución:** 
+a, b, d
 
 ## **2. Sobre el API Server, elige las respuestas correctas:**
 
@@ -22,6 +23,7 @@
 - D) Ejecuta Pods
 
 **Solución:** 
+a,b
 
 
 ## **3. Elige la respuesta correcta sobre Terraform**
@@ -31,6 +33,7 @@
 - D) `terraform output` borra el estado actual
 
 **Solución:** 
+c
 
 ## **4. Sobre Pods, elige las respuestas correctas:**
 
@@ -40,6 +43,7 @@
 - D) Se reprograman automáticamente si fallan
 
 **Solución:** 
+a,b,d
 
 ## **5. Sobre ReplicaSet, elige las respuestas correctas:**
 
@@ -49,6 +53,7 @@
 - D) Es usado por Deployments
 
 **Solución:** 
+a,b,d
 
 ## **6. Sobre Deployments, elige las respuestas correctas:**
 
@@ -58,6 +63,7 @@
 - D) Permiten estrategias de actualización
 
 **Solución:**
+a,b,d
 
 ## **7. Selecciona que afirmación es incorrecta sobre Git y el comando Cherry-pick**
 - A) `git cherry-pick <hash>` aplica los cambios de un commit específico a la rama actual
@@ -66,6 +72,7 @@
 - D) Borra el commit original de la rama de origen
 
 **Solución:**
+d
 
 
 ## **8. Sobre StatefulSets, elige las respuestas correctas:**
@@ -76,6 +83,7 @@
 - D) Usan ReplicaSets por debajo
 
 **Solución:**
+a,b
 
 ## **9. Elige las respuestas correctas sobre Services:**
 
@@ -85,6 +93,7 @@
 - D) Ingress es un tipo de recurso Service
 
 **Solución:**
+a,b,d
 
 ## **10. Selecciona que afirmación es incorrecta sobre Cloud Functions y Cloud Run**
 - A) Cloud Functions es mejor para fragmentos de código pequeños basados en eventos
@@ -93,6 +102,7 @@
 - D) Cloud Run cobra por el tiempo que la instancia está procesando peticiones
 
 **Solución:**
+
 
 ## **11. Elige las respuestas correctas sobre StorageClass:**
 
@@ -112,7 +122,7 @@
 
 **Solución:**
 
-## **13. Elige las respuesta correcta sobre Cloud Functions (2nd Gen)**
+## **13. Elige la respuesta correcta sobre Cloud Functions (2nd Gen)**
 - A) Está construida sobre Cloud Run y Eventarc
 - B) Solo puede ser activada por peticiones TCP
 - C) Solo puede ser activada por peticiones HTTP
