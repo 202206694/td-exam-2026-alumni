@@ -23,7 +23,7 @@ a, b, d
 - D) Ejecuta Pods
 
 **Solución:** 
-a,b
+a, b
 
 
 ## **3. Elige la respuesta correcta sobre Terraform**
@@ -43,7 +43,7 @@ c
 - D) Se reprograman automáticamente si fallan
 
 **Solución:** 
-a,b,d
+a, b, d
 
 ## **5. Sobre ReplicaSet, elige las respuestas correctas:**
 
@@ -53,7 +53,7 @@ a,b,d
 - D) Es usado por Deployments
 
 **Solución:** 
-a,b,d
+a, b, d
 
 ## **6. Sobre Deployments, elige las respuestas correctas:**
 
@@ -63,7 +63,7 @@ a,b,d
 - D) Permiten estrategias de actualización
 
 **Solución:**
-a,b,d
+a, b, d
 
 ## **7. Selecciona que afirmación es incorrecta sobre Git y el comando Cherry-pick**
 - A) `git cherry-pick <hash>` aplica los cambios de un commit específico a la rama actual
@@ -83,7 +83,7 @@ d
 - D) Usan ReplicaSets por debajo
 
 **Solución:**
-a,b
+a, b
 
 ## **9. Elige las respuestas correctas sobre Services:**
 
@@ -93,7 +93,7 @@ a,b
 - D) Ingress es un tipo de recurso Service
 
 **Solución:**
-a,b,c
+a, b, c
 
 ## **10. Selecciona que afirmación es incorrecta sobre Cloud Functions y Cloud Run**
 - A) Cloud Functions es mejor para fragmentos de código pequeños basados en eventos
