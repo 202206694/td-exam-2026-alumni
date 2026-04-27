@@ -3,8 +3,10 @@ kind: Service
 metadata:
   name: svc-router
 spec:
-  clusterIP: <placeholder>
+  clusterIP: None
   selector:
-    app: <placeholder>
+    app: router
   ports:
     - port: 3000
+
+    
