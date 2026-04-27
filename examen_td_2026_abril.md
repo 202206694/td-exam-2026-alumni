@@ -102,6 +102,7 @@ a,b,d
 - D) Cloud Run cobra por el tiempo que la instancia está procesando peticiones
 
 **Solución:**
+c
 
 
 ## **11. Elige las respuestas correctas sobre StorageClass:**
@@ -112,6 +113,7 @@ a,b,d
 - D) Puede definir parámetros del almacenamiento
 
 **Solución:** 
+a,b,d
 
 ## **12. Elige las respuestas correctas respecto a los ConfigMaps:**
 
@@ -121,6 +123,7 @@ a,b,d
 - D) Se pueden inyectar como variables de entorno
 
 **Solución:**
+a,b,d
 
 ## **13. Elige la respuesta correcta sobre Cloud Functions (2nd Gen)**
 - A) Está construida sobre Cloud Run y Eventarc
@@ -129,6 +132,7 @@ a,b,d
 - D) No permite control sobre la concurrencia de las instancias
 
 **Solución:**
+a
 
 ## **14. Elige las respuestas correctas sobre IAM:**
 
@@ -138,7 +142,7 @@ a,b,d
 - D) Permite cuentas de servicio
 
 **Solución:**
-
+a,b,d
 
 ## **15. Elige las respuestas correctas respecto a comandos Git**
 - A) El comando `git branch -n` es el estándar para crear una rama
@@ -147,6 +151,7 @@ a,b,d
 - D) `git commit -m` sirve para fusionar ramas
 
 **Solución:**
+b,c
 
 
 ## **16. Elige las respuestas correctas respecto a los workflows de GitHub Actions**
@@ -156,6 +161,7 @@ a,b,d
 - D) Un repositorio puede tener múltiples archivos de workflow para diferentes eventos
 
 **Solución:**
+b,d
 
 ## **17. Elige las respuestas correctas sobre Prometheus**
 - A) Prometheus utiliza un modelo "Push" para recolectar todas las métricas
@@ -164,6 +170,7 @@ a,b,d
 - D) No soporta el descubrimiento dinámico de servicios
 
 **Solución:**
+b,c
 
 ## **18. Elige las respuestas correctas sobre GitHub Actions**
 - A) Un "Job" es un conjunto de pasos que se ejecutan en el mismo runner
@@ -172,6 +179,7 @@ a,b,d
 - D) La sección `on:` define los eventos que disparan el workflow
 
 **Solución:** 
+a,c,d
 
 ## **19. Que afirmación es correcta sobre Google Cloud Logging**
 - A) Cloud Logging permite centralizar los logs de Cloud Run, GKE y Cloud Functions
@@ -180,6 +188,7 @@ a,b,d
 - D) Los logs de Cloud Run se borran inmediatamente después de que la instancia se detiene
 
 **Solución:** 
+a
 
 ## **20. Que afirmaciones son correctas sobre el fichero de estado de Terraform**
 - A) El archivo `terraform.tfstate` contiene el mapeo entre el código y la infraestructura real
@@ -188,3 +197,4 @@ a,b,d
 - D) El estado solo puede guardarse de forma local en el disco del desarrollador
 
 **Solución:** 
+a,c
