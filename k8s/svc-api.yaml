@@ -3,9 +3,9 @@ kind: Service
 metadata:
   name: svc-api
 spec:
-  type: <placeholder>
+  type: LoadBalancer
   selector:
     app: api-gw
   ports:
     - port: 80
-      targetPort: <placeholder>
+      targetPort: 3000
